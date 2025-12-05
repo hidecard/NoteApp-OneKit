@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OneKit JS - Note Taker</title>
+    <style>
+        body { font-family: sans-serif; background-color: #f4f4f9; color: #333; max-width: 500px; margin: 2rem auto; padding: 0 1rem; }
+        h1 { color: #5a67d8; }
+        #note-form { display: flex; gap: 0.5rem; margin-bottom: 1.5rem; }
+        #note-input { flex-grow: 1; padding: 0.5rem; border: 1px solid #ccc; border-radius: 4px; }
+        button { padding: 0.5rem 1rem; border: none; background-color: #5a67d8; color: white; border-radius: 4px; cursor: pointer; }
+        button:hover { background-color: #434190; }
+        ul { list-style: none; padding: 0; }
+        li { background: #fff; padding: 1rem; border-radius: 4px; margin-bottom: 0.5rem; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+        li.done { text-decoration: line-through; opacity: 0.6; }
+        .note-actions button { margin-left: 0.5rem; font-size: 0.8rem; padding: 0.25rem 0.5rem; }
+        .delete-btn { background-color: #e53e3e; }
+        .delete-btn:hover { background-color: #c53030; }
+        .done-btn { background-color: #38a169; }
+        .done-btn:hover { background-color: #2f855a; }
+    </style>
+</head>
+<body>
+
+    <div id="app">
+        <h1>My Notes</h1>
+        <form id="note-form">
+            <input type="text" id="note-input" placeholder="What's on your mind?" required>
+            <button type="submit">Add Note</button>
+        </form>
+        <ul id="note-list">
+            <!-- Notes will be rendered here by JavaScript -->
+        </ul>
+    </div>
+
+    <!-- Import OneKit JS and our main script -->
+    <script type="module" src="./src/main.js"></script>
+</body>
+</html>
